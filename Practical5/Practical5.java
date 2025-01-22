@@ -30,10 +30,10 @@ class Practical5 {
     }
 
     // Function to calculate the sum of an array
-    int arraySum(int i, int[] arr) {
-        if (i == arr.length) return 0; 
-        return arr[i] + arraySum(i + 1, arr); 
-    }
+    int getSum(int[] numbers) {
+    if (numbers.length == 0) return 0;
+    return numbers[0] + getSum(Arrays.copyOfRange(numbers, 1, numbers.length));
+}
 
     // Main function
     public static void main(String[] args) {
@@ -45,9 +45,10 @@ class Practical5 {
         System.out.println("Factorial using recursion: " + obj.factorial3(5));
 
         // Array sum example
-        int[] array = {12, 34, 0, 22, 67, 34, 100};
-        int totalSum = obj.arraySum(0, array);
+        int[] numbers = {12, 34, 0, 22, 67, 34, 100};
+        int totalSum = obj.getSum(numbers);
         System.out.println("The sum of the array is: " + totalSum);
     }
 }
+
 

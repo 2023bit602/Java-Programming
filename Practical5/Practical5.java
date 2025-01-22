@@ -33,11 +33,7 @@ class Practical5 {
     int getSum(int[] numbers) {
     if (numbers.length == 0) return 0;
     return numbers[0] + getSum(Arrays.copyOfRange(numbers, 1, numbers.length));
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> acd15be005891d0075d32fa62e3b63fc79f6201c
+    }
 
     // Main function
     public static void main(String[] args) {

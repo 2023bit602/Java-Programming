@@ -31,16 +31,16 @@ class Practical6 {
     
     void displayPattern2(int size) {
         for (int ln = 1; ln <= 2 * size - 1; ln++) {
-            // spaces and stars for each line
+            // spaces and symbols for each line
             int spaces = (ln <= size) ? (size - ln) : (ln - size);
-            int stars = 2 * size - 1 - 2 * spaces;
+            int symbol = 2 * size - 1 - 2 * spaces;
 
             // spaces
             for (int s = 1; s <= spaces; s++) {
                 System.out.print(" ");
             }
             // Print stars with alternating spaces
-            for (int s = 1; s <= stars; s++) {
+            for (int s = 1; s <= symbol; s++) {
             	if(ln <= size){
                 	System.out.print(s % 2 == 1 ? "+" : " ");
                 	}
@@ -51,7 +51,6 @@ class Practical6 {
     }
     
     void displayPattern3(int size) {
-        int totalLines = 2 * size - 1; // Total lines in the diamond
 
         // top half 
         for (int ln = 1; ln <= size; ln++) {

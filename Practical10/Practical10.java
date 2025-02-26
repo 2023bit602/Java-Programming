@@ -72,7 +72,6 @@ class Practical10{
 			timeTotal4 += endTime - startTime;
 		}
 		System.out.println("Time taken for string builder: "+timeTotal4/50);
-		
-		
+			
 	}
 }
